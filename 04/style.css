@@ -1,6 +1,6 @@
 :root {
     --link-size: 2rem;
-    --trans-property: all 0.3s ease;
+    --trans: all 0.3s ease;
 }
 body {
     margin: 0;
@@ -33,6 +33,17 @@ body {
 }
 
 .social {
-    width: var(–link-size);
-    height: var(–link-size);
+    display: flex;
+    width: var(--link-size);
+    height: var(--link-size);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.social i {
+    margin: auto;
+    font-size: 1rem;
+    color: #67798e;
+    z-index: 1;
+    transition: var(--trans);
 }
