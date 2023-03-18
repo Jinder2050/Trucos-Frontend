@@ -1,5 +1,5 @@
 :root {
-    --link-size: 2rem;
+    --link-size: 3rem;
 }
 body {
     margin: 0;
@@ -47,6 +47,7 @@ body {
     font-size: 1rem;
     color: #67798e;
     z-index: 1;
+    font-size: 1.5rem;
 }
 
 .social i:hover {
