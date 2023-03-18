@@ -1,11 +1,38 @@
+:root {
+    --link-size: 2rem;
+    --trans-property: all 0.3s ease;
+}
 body {
+    margin: 0;
+    padding: 0;
     background-color: #141414;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     min-height: 100vh;
 }
 
 #particles-js {
-    min-height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.social {
+    width: var(–link-size);
+    height: var(–link-size);
 }
