@@ -1,3 +1,7 @@
+:root {
+    --color-princp: #d4052b;
+}
+
 html,
 body {
     min-height: 100vh;
@@ -47,11 +51,55 @@ label {
 .input:valid ~ label {
     top: -20px;
     font-size: 14px;
-    color: #0e94f4;
+    color: var(--color-princp);
 }
 
 .bar {
     position: relative;
     display: block;
     width: 200px;
+}
+.bar::before,
+.bar::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--color-princp);
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+}
+.bar::before {
+    left: 50%;
+}
+.bar::after {
+    right: 50%;
+}
+.input:focus ~ .bar::before,
+.input:focus ~ .bar::after {
+    width: 50%;
+}
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 0px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+.input:focus ~ .highlight {
+    animation: input-focus 0.5s ease;
+}
+
+@keyframes input-focus {
+    from {
+        background: var(--color-princp);
+    }
+    to {
+        width: 185px;
+        background: transparent;
+    }
 }
