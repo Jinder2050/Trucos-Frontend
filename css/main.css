@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Outfit:wght@300;500&family=Poppins:wght@400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html,
+body {
+    font-family: 'Outfit';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 17, 17, 0.89);
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background:#1E1B33;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+    border-radius: 1rem;
+    margin: 1.25rem;
+    width: 18rem;
+    /* height: 25rem; */
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card__img {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 90%;
+    height: auto;
+    /* object-fit: cover; */
+}
+
+.card span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.6rem;
+    text-align: center;
+    color: gainsboro;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem;
+}
+.buttons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: transparent;
+    border: 0.5px solid rgba(231, 231, 231, 0.4);
+    color: gainsboro;
+    padding: 0.6rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(89.62deg, #0500FA 7.09%, #E01E5A 92.23%);
+}
