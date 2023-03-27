@@ -54,6 +54,16 @@ body {
     color: gainsboro;
 }
 
+.languajes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #03DB80;
+}
+.languajes p {
+    margin-left:0.3rem;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
