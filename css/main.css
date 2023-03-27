@@ -1,6 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Outfit:wght@300;500&family=Poppins:wght@400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
 
+/* ============================VARIABLES============================== */
+:root {
+    --color-primario: #03dac6;
+    --color-secundario: #ff0266;
+    --tercer-color: #faebcb;
+}
+
+
 html,
 body {
     font-family: 'Outfit' sans-serif;
@@ -9,33 +17,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(18, 17, 17, 0.89);
+    background-color: #1e1f26; 
     width: 100%;
     min-height: 100vh;
 }
 
-
+/* =================CONTAINER PRINCIPAL=========================== */
 .container {
     padding: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
+/* =================CARDS CONTAINER=========================== */
 .card {
-    background:#1E1B33;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0.9rem 2.2rem rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
     border-radius: 1rem;
     margin: 1.25rem;
     width: 18rem;
-    transition: transform 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     overflow: hidden;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    box-shadow: 0rem 0rem 1.3rem 1px rgba(215, 29, 97, 0.6);
+    transform: translateY(-2%)
 }
 
+/* CARDS IMAGENES */
 .card__img {
     border-radius: 1.5rem;
     padding: 1rem;
@@ -43,26 +58,29 @@ body {
     height: auto;
 }
 
+/* CARDS TITULO */
 .card span {
     display: block;
     font-size: 1.4rem;
     font-weight: 500;
     padding: 0.6rem;
     text-align: center;
-    color: gainsboro;
+    color: var(--color-primario);
 }
 
+/* CARDS LAMGS */
 .languajes {
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #03DB80;
+    color: var(--tercer-color);
 }
 .languajes p {
     margin-left:0.3rem;
 }
 
+/* BOTONES */
 .buttons {
     display: flex;
     justify-content: center;
@@ -76,7 +94,7 @@ body {
 button {
     background-color: transparent;
     border: 0.5px solid rgba(231, 231, 231, 0.4);
-    color: gainsboro;
+    color: var(--tercer-color);
     padding: 0.6rem 1.25rem;
     text-align: center;
     text-decoration: none;
@@ -85,8 +103,39 @@ button {
     border-radius: 0.3rem;
     margin: 0.3rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: linear-gradient(89.62deg, var(--color-primario) 7.09%, var(--color-secundario) 92.23%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 105%;
 }
 
 button:hover {
-    background: linear-gradient(89.62deg, #0500FA 7.09%, #E01E5A 92.23%);
+    color: var(--tercer-color);
+}
+
+/* ==================PARTICLES JS ESTILOS======================== */
+.background {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
 }
